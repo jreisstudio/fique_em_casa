@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="app/js/libs/Chart.js"></script>
+    <link rel="stylesheet" href="app/css/Chart.min.css"> 
+    <link rel="stylesheet" href="app/css/main.css"> 
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fique em casa </title>
+</head>
+<body>
+
+    <canvas id="myChart" width="200px" height="200px"></canvas>
+
+    Fique em casa....
+</body>
+
+<script>
+    let data = {
+
+        labels: ["Jan","Fev","Mar","Abril","Maio"],
+        datasets:[
+            {
+                label: "Numero de casos",
+                data: [5,15,2,20,25],
+                borderWidth: 6,
+                borderColor: 'rgb(255,10,132, 0.8)',
+                backgroundColor: 'rgb(255,10,132, 0.2)'
+            },
+            {
+                label: "Taxa de isolamento",
+                data: [0.8,0.6,1,0.4,0.4],
+                borderWidth: 6,
+                borderColor: 'rgb(10,255,132, 0.8)',
+                backgroundColor: 'rgb(10,255,132, 0.2)'
+            }
+
+        ]
+    };
+    let options= [
+
+    ];
+    let ctx = document.getElementById('myChart');
+    let myLineChart = new Chart(ctx, {
+    type: 'line',
+    data: data,
+    options: options
+});
+
+
+</script>
+
+
+
+
+</html>
